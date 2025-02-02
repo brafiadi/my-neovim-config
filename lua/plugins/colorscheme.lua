@@ -14,14 +14,25 @@
 --   },
 -- }
 
+-- return {
+--   "rebelot/kanagawa.nvim",
+--   lazy = false,
+--   priority = 1000,
+--   config = function()
+--     require("kanagawa").setup({
+--       theme = "dragon",
+--     })
+--     vim.cmd("colorscheme kanagawa-dragon")
+--   end,
+-- }
+
 return {
-  "rebelot/kanagawa.nvim",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    require("kanagawa").setup({
-      theme = "dragon",
-    })
-    vim.cmd("colorscheme kanagawa-dragon")
-  end,
+  { "sainnhe/sonokai" },
+
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "sonokai",
+    },
+  },
 }
