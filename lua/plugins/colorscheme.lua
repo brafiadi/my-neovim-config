@@ -27,9 +27,14 @@
 -- }
 
 return {
-  "askfiy/visual_studio_code",
-  priority = 100,
-  config = function()
-    vim.cmd([[colorscheme visual_studio_code]])
-  end,
+  {
+    "folke/tokyonight.nvim",
+    priority = 1000, -- Ensure it loads first
+    config = function()
+      require("tokyonight").setup({
+        style = "night", -- Choose "darker" for a darker variant
+      })
+      require("tokyonight").load()
+    end,
+  },
 }
